@@ -12,4 +12,9 @@ describe("Game",  function(){
     game.selectField(1,2);
     expect(grid.place).toHaveBeenCalledWith(1,2,'o');
   });
+
+  it("should switch players", function(){
+    game.selectField(1,2);
+    expect(game.currentPlayer).toEqual(game.playerX);
+  });
 });

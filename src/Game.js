@@ -7,4 +7,11 @@ function Game(grid, playerO, playerX) {
 
 Game.prototype.selectField = function(x,y) {
   this.grid.place(x, y, this.currentPlayer.getSymbol());
+  this.switchTurn();
+  return this.grid.setGrid();
+};
+
+Game.prototype.switchTurn = function() {
+  (this.currentPlayer === this.playerO) ? (this.currentPlayer = this.playerX) : (this.currentPlayer = this.playerO);
+  return this.currentPlayer;
 };
