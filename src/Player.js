@@ -1,3 +1,4 @@
+(function(exports){
 function Player(symbol) {
   this.symbol = symbol;
 }
@@ -5,3 +6,5 @@ function Player(symbol) {
 Player.prototype.getSymbol = function(){
   return this.symbol;
 };
+exports.Player = Player;
+})(this);

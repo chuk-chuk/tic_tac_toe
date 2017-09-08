@@ -1,3 +1,4 @@
+(function(exports){
 function Grid() {
   this.grid = [[null, null, null], [null, null, null], [null, null, null]];
 }
@@ -15,3 +16,5 @@ Grid.prototype.isFieldTaken = function(x,y){
     return true;
   }
 };
+exports.Grid = Grid;
+})(this);

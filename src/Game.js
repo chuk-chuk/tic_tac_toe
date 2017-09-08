@@ -1,3 +1,4 @@
+(function(exports){
 function Game(grid, playerO, playerX) {
   this.playerO = playerO;
   this.playerX = playerX;
@@ -20,3 +21,5 @@ Game.prototype.switchTurn = function() {
   (this.currentPlayer === this.playerO) ? (this.currentPlayer = this.playerX) : (this.currentPlayer = this.playerO);
   return this.currentPlayer;
 };
+exports.Game = Game;
+})(this);
