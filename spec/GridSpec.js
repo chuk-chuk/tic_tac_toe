@@ -13,4 +13,14 @@ describe("Grid",  function(){
     expect(grid.grid.length).toEqual(3);
   });
 
+  it("should be able to place the symbol", function(){
+    grid.place(0,1,"o");
+    expect(grid.setGrid()[0][1]).toEqual('o');
+  });
+
+  it("should check if a field isn't empty", function(){
+    grid.place(0,1,"o");
+    expect(grid.isFieldTaken(0,1)).toBe(true);
+  });
+
 });
