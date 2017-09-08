@@ -6,8 +6,13 @@ function Game(grid, playerO, playerX) {
 }
 
 Game.prototype.selectField = function(x,y) {
-  this.grid.place(x, y, this.currentPlayer.getSymbol());
-  this.switchTurn();
+  if (this.grid.isFieldTaken()) {
+    throw new Error('Field is not available');
+  } else {
+    this.grid.place(x, y, this.currentPlayer.getSymbol());
+    this.switchTurn();
+    return this.grid.setGrid();
+  }
   return this.grid.setGrid();
 };
 

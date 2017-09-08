@@ -1,6 +1,6 @@
 describe("Game",  function(){
   var game;
-  var grid = jasmine.createSpyObj('grid', ['place', 'setGrid']);
+  var grid = jasmine.createSpyObj('grid', {'place': [], 'setGrid': [[]],'isFieldTaken': false});
   var playerO = jasmine.createSpyObj('player', {'getSymbol': 'o'});
   var playerX = jasmine.createSpyObj('player', {'getSymbol': 'x'});
 
